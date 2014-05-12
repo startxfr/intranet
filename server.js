@@ -2,12 +2,21 @@
 //  OpenShift sample Node application
 var express = require('express');
 var fs      = require('fs');
-
+ 
+//supported static files
+var extensions = {
+    ".html" : "text/html",
+    ".css" : "text/css",
+    ".js" : "application/javascript",
+    ".png" : "image/png",
+    ".gif" : "image/gif",
+    ".jpg" : "image/jpeg"
+};
 
 /**
  *  Define the sample application.
  */
-var SampleApp = function() {
+var StartxIntranetApp = function() {
 
     //  Scope.
     var self = this;
@@ -22,7 +31,7 @@ var SampleApp = function() {
      */
     self.setupVariables = function() {
         //  Set the environment variables we need.
-        self.ipaddress = process.env.OPENSHIFT_NODEJS_IP;
+        self.ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
         self.port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
         if (typeof self.ipaddress === "undefined") {
@@ -112,9 +121,10 @@ var SampleApp = function() {
      *  the handlers.
      */
     self.initializeServer = function() {
-        self.createRoutes();
-        self.app = express.createServer();
-
+        self.createRoutes();        
+        self.app = express();
+//        self.app.use(express.compress());
+        self.app.use('/assets',express.static(__dirname + '/assets'));
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
@@ -153,7 +163,6 @@ var SampleApp = function() {
 /**
  *  main():  Main code.
  */
-var zapp = new SampleApp();
+var zapp = new StartxIntranetApp();
 zapp.initialize();
 zapp.start();
-
