@@ -1,30 +1,32 @@
 {
-  "name": "Startx-Intranet-App",
-  "version": "0.1.0",
-  "description": "STARTX intranet",
-  "keywords": [
-    "intranet",
-    "Node.js",
-    "startx",
-    "openshift"
-  ],
-  "author": {
-    "name": "STARTX",
-    "email": "dev@startx.fr",
-    "url": "http://www.startx.fr/"
-  },
-  "homepage": "http://www.startx.fr/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/startxfr/intranet"
-  },
-  "engines": {
-    "node": ">= 0.6.0",
-    "npm": ">= 1.0.0"
-  },
-  "dependencies": { },
-  "devDependencies": {},
-  "bundleDependencies": [],
-  "private": true,
-  "main": "server.js"
+    "name": "StartxIntranetApp",
+    "version": "0.1.0",
+    "description": "STARTX intranet",
+    "keywords": [
+        "intranet",
+        "Node.js",
+        "startx",
+        "openshift"
+    ],
+    "author": {
+        "name": "STARTX",
+        "email": "dev@startx.fr",
+        "url": "http://www.startx.fr/"
+    },
+    "homepage": "http://www.startx.fr/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/startxfr/intranet"
+    },
+    "engines": {
+        "node": ">= 0.6.0",
+        "npm": ">= 1.0.0"
+    },
+    "dependencies": {
+        "express": "*"
+    },
+    "devDependencies": {},
+    "bundleDependencies": [],
+    "private": true,
+    "main": "server.js"
 }
