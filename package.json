@@ -1,35 +1,30 @@
 {
-  "name": "OpenShift-Sample-App",
-  "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "name": "Startx-Intranet-App",
+  "version": "0.1.0",
+  "description": "STARTX intranet",
   "keywords": [
-    "OpenShift",
+    "intranet",
     "Node.js",
-    "application",
+    "startx",
     "openshift"
   ],
   "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
+    "name": "STARTX",
+    "email": "dev@startx.fr",
+    "url": "http://www.startx.fr/"
   },
-  "homepage": "http://www.openshift.com/",
+  "homepage": "http://www.startx.fr/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openshift/origin-server"
+    "url": "https://github.com/startxfr/intranet"
   },
-
   "engines": {
     "node": ">= 0.6.0",
     "npm": ">= 1.0.0"
   },
-
-  "dependencies": {
-    "express": "~3.4.4"
-  },
+  "dependencies": { },
   "devDependencies": {},
   "bundleDependencies": [],
-
   "private": true,
   "main": "server.js"
 }
